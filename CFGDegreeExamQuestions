@@ -110,6 +110,7 @@ The difference in code is that in figure 4, it increments the value by adding th
 In figure 5, the value is set to the payload value
 
 Algorithms 1 (coding)
+(JS) 
 1. 
 My code is below, I had to use codepen for this as my VScode stopped updating git. 
 // Define the isPalindrome function
