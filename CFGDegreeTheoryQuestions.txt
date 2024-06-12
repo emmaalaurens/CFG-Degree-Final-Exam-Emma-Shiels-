@@ -25,3 +25,6 @@ Easier to debug as there is only one tree to take from
 Predictable and traceable states. 
 
 
+3.What is the difference between a stateless component and a stateful component in React?
+
+The behaviour and state of the app is controlled by its stateful components, but the focus and rendering of UI occurs from the stateless components.
