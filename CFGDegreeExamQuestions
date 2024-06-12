@@ -70,5 +70,37 @@ const classInfo = () => {
             <button onClick={handleAddStudent}>Add Student</button>
         </div>
     );
+
+Part 3
+1)
+Line 174 change of code: this affects how the state is updated. The function is an increment and increments the current value by the value provided in ‘action.payload’ 
+2) If we aren’t setting the state locally anymore, we want to use dispatch. We would need to make some changes. We’d first have to import useDispatch from redux. Please see below for more information on what we would have to change to figure 4, 3 and 2. 
+
+const classInfo = () => {
+    const dispatch = useDispatch(); // useDispatch redux hook
+
+    let [studentsCount, setStudentsCount] = useState(0);
+
+    const handleAddStudent = () => {
+        const presentStudentsCount = students.reduce((count, student) => {
+            if (student.present) {
+                return count + 1;
+            }
+            return count;
+        }, 0);
+
+        // Dispatching an "increment" action with presentStudentsCount as payload
+        dispatch({ type: 'increment', payload: presentStudentsCount });
+    };
+
+    return (
+        <div>
+            <p>Number of students in class room: {studentsCount}</p>
+            <button onClick={handleAddStudent}>Add Student</button>
+        </div>
+    );
+};
+
+
 };
 
