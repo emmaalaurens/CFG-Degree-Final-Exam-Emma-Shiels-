@@ -104,3 +104,7 @@ const classInfo = () => {
 
 };
 
+3) 
+Figure 4 is best suited to ensure that the increment action updates the state with the correct total number of present students. This is because the code ensures the count reflects the total number of present students using accumulation over multiple dispatches. 
+The difference in code is that in figure 4, it increments the value by adding the payload to the current state’s value, accumulating dispatches.
+In figure 5, the value is set to the payload value
