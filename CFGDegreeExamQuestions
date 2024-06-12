@@ -171,3 +171,7 @@ console.log(findMissingNumber([3, -7, 1, 2, 8, 4, 5])); // Output: Error: Input 
 console.log(findMissingNumber([3, 'a', 1, 2, 8, 4, 5])); // Output: Error: Input array contains non-positive integer or non-numeric value
 
 
+Explanations and discussions: 
+Used JS as I prefer it to Python, and also, my VSCode keeps hitting me with a failed to execute git warning so I had to improvise and use codepen (easier with JS). I have an extremely dodgy MySQL Mac app, also. I digress. 
+Function of findMissingNumber takes the array arr as the input, and then it checks if arr is a positive number, then returns error if it is a non-positive integer. Calculation of expected sum, calculates the actual sum, and then subreacts the actual sum from the expected sum to find the missing number and return it! The time complexity is O(n) and the space complexity is O(1). 
+
