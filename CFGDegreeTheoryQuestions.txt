@@ -1,12 +1,13 @@
 
 1. Design Heuristics:
-In design heuristics, 'matching between the system and the real world' means constructing an app or website that follows the familiarity of a users existing real-world experience. An example of this would be using a magnifying glass for the search bar/icon. This would match with a user’s experience of knowing what tool they use to search with in real life. 
+In design heuristics, 'matching between the system and the real world' means constructing an app or website that follows the familiarity of a users existing real-world experience. 
+An example of this would be using a magnifying glass for the search bar/icon. This would match with a user’s experience of knowing what tool they use to search with in real life. 
 Advantages of this are: 
 UI/UX is enhanced and familiar: As the system feels familiar, natural and friendly, then the user will have a better experience and return to the website/app. 
 Building on this, if the site is familiar, this will mean the user’s tasks are completed faster and with less error/confusion. There will be less contacts to the app help team if the users experience is clear. 
 This also means that the user is more likely to be satisfied or happy with the app/site, if they are a customer - this will increase their confidence in purchasing a product or entering their personal information.
 
-An example of a magnifying glass for a search button is;
+A JSX example of a magnifying glass for a search button is;
 function SearchButton() {
   return (
     <button>
@@ -28,7 +29,7 @@ Predictable and traceable states.
 3.What is the difference between a stateless component and a stateful component in React?
 
 The behaviour and state of the app is controlled by its stateful components, but the focus and rendering of UI occurs from the stateless components.
- Code example of stateless component: 
+ JSX example of stateless component: 
  const Greeting = (props) => {
   return <h1>Hello, {props.name}!</h1>;
     };
@@ -36,7 +37,7 @@ The behaviour and state of the app is controlled by its stateful components, but
 // Produces 
 <Greeting name="Bean" />
 
-Code example of a stateful component, the count value has an increment button and useState hook to manage the count variable:
+JSX example of a stateful component, the count value has an increment button and useState hook to manage the count variable:
 
 const Counter = () => {
   const [count, setCount] = useState(0);
