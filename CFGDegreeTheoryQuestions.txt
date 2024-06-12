@@ -28,3 +28,49 @@ Predictable and traceable states.
 3.What is the difference between a stateless component and a stateful component in React?
 
 The behaviour and state of the app is controlled by its stateful components, but the focus and rendering of UI occurs from the stateless components.
+ Code example of stateless component: 
+ const Greeting = (props) => {
+  return <h1>Hello, {props.name}!</h1>;
+    };
+
+// Produces 
+<Greeting name="Bean" />
+
+Code example of a stateful component, the count value has an increment button and useState hook to manage the count variable: 
+import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+};
+
+export default Counter;
+
+4.List out the advantages and disadvantages of exploratory testing (used in Agile) and scripted testing?
+
+Advantages of exploratory testing:
+
+Flexibility: Testers can adapt to new information and change their testing approach flexibly, 
+Encourages testers to think creatively to discover the unexpected issues. 
+Often finds bugs that scripted tests might miss.
+
+
+Disadvantage of exploratory testing
+You have to have a more in=depth knowledge of the domain to conduct an exploratory test. 
+Difficult to repeat the test as the test parameters are not pre-defined and lacks formal documentation. 
+
+Advantages of scripted testing
+Tests are easily repeatable/reproducable due to pre-defined parameters. 
+
+Disadvantages of scripted testing 
+Not as flexible due to their pre-defined parameters
