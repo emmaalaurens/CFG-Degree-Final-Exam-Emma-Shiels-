@@ -36,8 +36,7 @@ The behaviour and state of the app is controlled by its stateful components, but
 // Produces 
 <Greeting name="Bean" />
 
-Code example of a stateful component, the count value has an increment button and useState hook to manage the count variable: 
-import React, { useState } from 'react';
+Code example of a stateful component, the count value has an increment button and useState hook to manage the count variable:
 
 const Counter = () => {
   const [count, setCount] = useState(0);
