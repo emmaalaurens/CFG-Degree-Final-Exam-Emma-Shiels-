@@ -108,3 +108,33 @@ const classInfo = () => {
 Figure 4 is best suited to ensure that the increment action updates the state with the correct total number of present students. This is because the code ensures the count reflects the total number of present students using accumulation over multiple dispatches. 
 The difference in code is that in figure 4, it increments the value by adding the payload to the current state’s value, accumulating dispatches.
 In figure 5, the value is set to the payload value
+
+Algorithms 1 (coding)
+1. 
+My code is below, I had to use codepen for this as my VScode stopped updating git. 
+// Define the isPalindrome function
+function isPalindrome(s) {
+    let left = 0;
+    let right = s.length - 1;
+
+    while (left < right) {
+        if (s[left] !== s[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+// Test cases
+console.log(isPalindrome(''));           // Output: true (empty string is a palindrome)
+console.log(isPalindrome('a'));          // Output: true (single character string is a palindrome)
+console.log(isPalindrome('beansr'));    // Output: true (palindrome string)
+console.log(isPalindrome('hello'));      // Output: false (non-palindrome string)
+
+My discussion: 
+So the isPalindrome is used with left and right as pointers to traverse the string from both ends at the same time, the two pointer technique. This will return false as soon as the characters don’t match, showing that the string is not a palindrome. It will return true if the match is a palindrome. For time and space complexity, using the two pointer technique, the time complexity is O(n) as n is the length of the input string. The space complexity is O(1) as there are two pointers that are stored using a constant amount of space. 
+I used this approach as the two pointer method is much more easy to understand, and it looks at both ends at the same time, and this results in linear time complexity. 
+
