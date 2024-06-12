@@ -17,4 +17,11 @@ function SearchButton() {
 }
 
 
+2. What do you understand by “Single source of truth”? and how does it relate to redux? What are the advantages ?  
+
+In redux, the single source of truth means that the global state is contained within a single tree - so your browser cannot override any values or outcomes.  
+Advantages of this are: 
+Easier to debug as there is only one tree to take from 
+Predictable and traceable states. 
+
 
