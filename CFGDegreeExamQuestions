@@ -41,3 +41,34 @@ Question 1:
 Line 34 brief summary: useState(0) is a react hook that initalises the variable state with an initial value of zero. useState returns an array where the first element is the current state value: ‘studentsCount’. And setStudentsCount is the function that updates the state value (and that the user can update them). Summary: studentsCount is the current number of students and setStudentsCount is a function we can update this state with. 
 Line 39 brief summary: button creates a button element with ‘Add Student’ as text. onClick is an event where the function is specified (when the user clickson the button). The ‘?????’ is a placeholder for the function/event for when the button is clicked and should be edited. 
 
+I have added a) b) and c) where the questions have been answered, in my pseudocode.
+
+// Define the classInfo component
+const classInfo = () => {
+    // a) Define state variable studentsCount and its updater function setStudentsCount
+    let [studentsCount, setStudentsCount] = useState(0);
+
+    // Define the event for the clicked "Add Student" button
+    const handleAddStudent = () => {
+        // b) Calculate the total number of present students
+        const presentStudentsCount = students.reduce((count, student) => {
+            if (student.present) {
+                return count + 1;
+            }
+            return count;
+        }, 0);
+
+        // c) Update the studentsCount state with the total number of present students
+        setStudentsCount(presentStudentsCount);
+    };
+
+    // Return the JSX for the component
+    return (
+        <div>
+            <p>Number of students in class room: {studentsCount}</p>
+            {/* Bind the click event handler to the button */}
+            <button onClick={handleAddStudent}>Add Student</button>
+        </div>
+    );
+};
+
