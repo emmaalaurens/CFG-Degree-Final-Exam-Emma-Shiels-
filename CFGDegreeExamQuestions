@@ -138,3 +138,35 @@ My discussion:
 So the isPalindrome is used with left and right as pointers to traverse the string from both ends at the same time, the two pointer technique. This will return false as soon as the characters don’t match, showing that the string is not a palindrome. It will return true if the match is a palindrome. For time and space complexity, using the two pointer technique, the time complexity is O(n) as n is the length of the input string. The space complexity is O(1) as there are two pointers that are stored using a constant amount of space. 
 I used this approach as the two pointer method is much more easy to understand, and it looks at both ends at the same time, and this results in linear time complexity. 
 
+
+Algorithms 2 (coding)
+(JS) 
+Please see below my JS code for the missing array number. I tested this and it does return the mising number, and also gives off errors for the non-positive integers or any non-numeric values. 
+function findMissingNumber(arr) {
+    // Check if input array contains non-positive integers or non-numeric values
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] !== 'number' || arr[i] <= 0 || isNaN(arr[i])) {
+            return "Error: Input array contains non-positive integer or non-numeric value";
+        }
+    }
+
+    // Calculate the expected sum of numbers from 1 to n
+    const n = arr.length + 1;
+    const expectedSum = (n * (n + 1)) / 2;
+    
+    // Calculate the actual sum of numbers in the input array
+    let actualSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        actualSum += arr[i];
+    }
+
+    // Return the missing number by subtracting actual sum from expected sum
+    return expectedSum - actualSum;
+}
+
+// Example usage:
+console.log(findMissingNumber([3, 7, 1, 2, 8, 4, 5])); // Output: 6
+console.log(findMissingNumber([3, -7, 1, 2, 8, 4, 5])); // Output: Error: Input array contains non-positive integer or non-numeric value
+console.log(findMissingNumber([3, 'a', 1, 2, 8, 4, 5])); // Output: Error: Input array contains non-positive integer or non-numeric value
+
+
