@@ -38,8 +38,11 @@ function countReducer(state = initialState, action) {
 }
 Part 2: 
 Question 1:
-Line 34 brief summary: useState(0) is a react hook that initalises the variable state with an initial value of zero. useState returns an array where the first element is the current state value: ‘studentsCount’. And setStudentsCount is the function that updates the state value (and that the user can update them). Summary: studentsCount is the current number of students and setStudentsCount is a function we can update this state with. 
-Line 39 brief summary: button creates a button element with ‘Add Student’ as text. onClick is an event where the function is specified (when the user clickson the button). The ‘?????’ is a placeholder for the function/event for when the button is clicked and should be edited. 
+Line 34 brief summary: useState(0) is a react hook that initalises the variable state with an initial value of zero. useState returns an array where the first element is the current state value: ‘studentsCount’. 
+And setStudentsCount is the function that updates the state value (and that the user can update them). 
+studentsCount is the current number of students and setStudentsCount is a function we can update this state with. 
+Line 39 brief summary: button creates a button element with ‘Add Student’ as text. onClick is an event where the function is specified (when the user clickson the button). 
+The ‘?????’ is a placeholder for the function/event for when the button is clicked and should be edited. 
 
 I have added a) b) and c) where the questions have been answered, in my pseudocode.
 
@@ -74,7 +77,8 @@ const classInfo = () => {
 Part 3
 1)
 Line 174 change of code: this affects how the state is updated. The function is an increment and increments the current value by the value provided in ‘action.payload’ 
-2) If we aren’t setting the state locally anymore, we want to use dispatch. We would need to make some changes. We’d first have to import useDispatch from redux. Please see below for more information on what we would have to change to figure 4, 3 and 2. 
+2) If we aren’t setting the state locally anymore, we want to use dispatch. We would need to make some changes. 
+We’d first have to import useDispatch from redux. Please see below for more information on what we would have to change to figure 4, 3 and 2. 
 
 const classInfo = () => {
     const dispatch = useDispatch(); // useDispatch redux hook
@@ -101,13 +105,13 @@ const classInfo = () => {
     );
 };
 
-
 };
 
 3) 
-Figure 4 is best suited to ensure that the increment action updates the state with the correct total number of present students. This is because the code ensures the count reflects the total number of present students using accumulation over multiple dispatches. 
+Figure 4 is best suited to ensure that the increment action updates the state with the correct total number of present students. 
+This is because the code ensures the count reflects the total number of present students using accumulation over multiple dispatches. 
 The difference in code is that in figure 4, it increments the value by adding the payload to the current state’s value, accumulating dispatches.
-In figure 5, the value is set to the payload value
+In figure 5, the value is set to the payload value. 
 
 Algorithms 1 (coding)
 (JS) 
@@ -136,7 +140,9 @@ console.log(isPalindrome('beansr'));    // Output: true (palindrome string)
 console.log(isPalindrome('hello'));      // Output: false (non-palindrome string)
 
 My discussion: 
-So the isPalindrome is used with left and right as pointers to traverse the string from both ends at the same time, the two pointer technique. This will return false as soon as the characters don’t match, showing that the string is not a palindrome. It will return true if the match is a palindrome. For time and space complexity, using the two pointer technique, the time complexity is O(n) as n is the length of the input string. The space complexity is O(1) as there are two pointers that are stored using a constant amount of space. 
+So the isPalindrome is used with left and right as pointers to traverse the string from both ends at the same time, the two pointer technique. This will return false as soon as the characters don’t match, showing that the string is not a palindrome. 
+It will return true if the match is a palindrome. For time and space complexity, using the two pointer technique, the time complexity is O(n) as n is the length of the input string. 
+The space complexity is O(1) as there are two pointers that are stored using a constant amount of space. 
 I used this approach as the two pointer method is much more easy to understand, and it looks at both ends at the same time, and this results in linear time complexity. 
 
 
@@ -173,5 +179,7 @@ console.log(findMissingNumber([3, 'a', 1, 2, 8, 4, 5])); // Output: Error: Input
 
 Explanations and discussions: 
 Used JS as I prefer it to Python, and also, my VSCode keeps hitting me with a failed to execute git warning so I had to improvise and use codepen (easier with JS). I have an extremely dodgy MySQL Mac app, also. I digress. 
-Function of findMissingNumber takes the array arr as the input, and then it checks if arr is a positive number, then returns error if it is a non-positive integer. Calculation of expected sum, calculates the actual sum, and then subreacts the actual sum from the expected sum to find the missing number and return it! The time complexity is O(n) and the space complexity is O(1). 
+Function of findMissingNumber takes the array arr as the input, and then it checks if arr is a positive number, then returns error if it is a non-positive integer. 
+Calculation of expected sum, calculates the actual sum, and then subreacts the actual sum from the expected sum to find the missing number and return it! 
+The time complexity is O(n) and the space complexity is O(1). 
 
